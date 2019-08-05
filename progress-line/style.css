@@ -1,0 +1,54 @@
+.progress-line-wrapper .item {
+  width: 120px;
+  float: left;
+  text-align: center;
+  font-size: 14px;
+}
+
+.progress-line-wrapper .item .title {
+  display: block;
+  color: #d5d5d5;
+}
+
+.progress-line-wrapper .item .step {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  background-color: #d5d5d5;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.progress-line-wrapper .item .step::before,
+.progress-line-wrapper .item .step::after {
+  content: '';
+  width: 50px;
+  height: 4px;
+  background-color: #d5d5d5;
+  position: absolute;
+  top: 8px;
+}
+.progress-line-wrapper .item .step::before {
+  right: 20px;
+}
+
+.progress-line-wrapper .item .step::after {
+  left: 20px;
+}
+
+/* 激活时样式 */
+.progress-line-wrapper .item.active .title {
+  color: #c12d1e;
+}
+
+.progress-line-wrapper .item.active .step {
+  background-color: #c12d1e;
+  color: #fff;
+}
+
+.progress-line-wrapper .item.active .step::before,
+.progress-line-wrapper .item.active .step::after {
+  background-color: #c12d1e;
+}
