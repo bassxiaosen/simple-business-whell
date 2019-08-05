@@ -1,0 +1,107 @@
+.panelArea {
+  width: 400px;
+  padding: 0px;
+  background: #e9f9e9;
+  margin:auto;
+  position: relative;
+  z-index: -10;
+}
+/* 中轴线 */
+.panelArea::before {
+  content:'';
+  position: absolute;
+  width: 8px;
+  border: 2px solid #fff;
+  background: #e9e9e9;
+  display: inline-block;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin: auto;
+  z-index: -1;
+}
+
+.panelArea .time {
+  padding-top: 40px;
+  text-align:center;
+  z-index:100;
+}
+
+.panelArea .time:first-of-type{
+  padding:0;
+}
+
+.panelArea .time .content{
+  display:inline-block;
+  border-radius: 17px;
+  border: 4px solid #fff;
+  padding: 3px 6px;
+  background:#e9e9e9;
+}
+
+.panelArea .branch{
+  padding: 10px;
+  background: #e9e9e9;
+  width: 180px;
+  box-sizing: border-box;
+  position: relative;
+  margin: 10px 0;
+}
+
+.panelArea .branch:nth-of-type(odd) {
+  left: 220px;
+}
+
+.panelArea .branch:nth-of-type(even) {
+  left: 0px;
+}
+
+/* 标记三角形 */
+.panelArea .branch:nth-of-type(even)::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: -18px;
+  border: 10px solid transparent;
+  border-left: 20px solid #e9e9e9;
+}
+
+.panelArea .branch:nth-of-type(odd)::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: -18px;
+  border: 10px solid transparent;
+  border-right: 20px solid #e9e9e9;
+}
+
+
+/* 节点小圆点 */
+.panelArea .branch:nth-of-type(even)::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background: #e9e9e9;
+  right: -30px;
+  bottom: 0;
+}
+
+.panelArea .branch:nth-of-type(odd)::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background: #e9e9e9;
+  left: -30px;
+  bottom: 0;
+}
